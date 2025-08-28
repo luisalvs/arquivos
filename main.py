@@ -1,5 +1,12 @@
 
+def ler_arquivo(filename):
+    with open(filename) as file:
+        print(file.read())
 
-with open('pi_digits.txt') as file:
-    for line in file:
-        print(line.strip())
+try:
+    filenames = ['cats.txt', 'dogs.txt']
+    for filename in filenames:
+        ler_arquivo(filename)
+except FileNotFoundError:
+    pass
+
